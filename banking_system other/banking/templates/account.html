@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h2 class="text-center">Account Overview</h2>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <h3 class="panel-title">Account Details</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <p><strong>Account Holder:</strong> {{ user.name }}</p>
+                    <p><strong>Account Balance:</strong> {{ user.balance }}</p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <h3 class="panel-title">Choose an Operation</h3>
+                </div>
+                <div class="panel-body text-center">
+                    <a href="{{ url_for('deposit') }}" class="btn btn-success btn-lg" style="margin: 10px;">Deposit</a>
+                    <a href="{{ url_for('withdraw') }}" class="btn btn-danger btn-lg" style="margin: 10px;">Withdraw</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
