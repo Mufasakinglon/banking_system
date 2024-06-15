@@ -3,7 +3,6 @@ from wtforms import Form, StringField, TextAreaField, PasswordField, validators
 from passlib.hash import sha256_crypt
 from flask_mysqldb import MySQL
 from functools import wraps
-from functions import Bank  # Ensure this imports your Bank class correctly
 
 app = Flask(__name__)
 
